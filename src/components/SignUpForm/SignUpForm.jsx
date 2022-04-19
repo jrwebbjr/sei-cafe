@@ -20,7 +20,8 @@ export default class SignUpForm extends Component {
             const formData = {...this.state};
             delete formData.error;
             delete formData.confirm;
-            const user = await SignUp(formData)
+            const user = await signUp(formData)
+            localStorage.setItem('token', user)
         } catch (error) {
             this.setState({ error: 'Sign Up Failed' })
         }
@@ -47,7 +48,7 @@ export default class SignUpForm extends Component {
                     <button className="button" type="submit" disabled={disable}>SIGN UP</button>
                     </form>
                 </div>
-                <p className="error-message">&nbsp;{this.state.error}</p>
+                <h2 className="error-message">&nbsp;{this.state.error}</h2>
             </div>
         )
     }
