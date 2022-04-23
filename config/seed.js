@@ -4,6 +4,7 @@ require('./database');
 const Category = require('../models/category');
 const Item = require('../models/item');
 
+//parenthesis wrapping the async function makes it an iffy where it doesnt need to be invoked to run, it just automatically calls its self and runs.
 (async function() {
 
   await Category.deleteMany({});
