@@ -10,7 +10,7 @@ router.get('/history', ordersCtrl.history);
 router.post('/cart/items/:id', ordersCtrl.addToCart);
 // POST /api/orders/cart/checkout
 router.post('/cart/checkout', ordersCtrl.checkout);
-// POST /api/orders/cart/qty
+// PUT /api/orders/cart/qty
 router.put('/cart/qty', ordersCtrl.setItemQtyInCart);
 
 module.exports = router;
