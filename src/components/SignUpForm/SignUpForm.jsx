@@ -11,7 +11,7 @@ export default class SignUpForm extends Component {
     }
 
     handleChange = (evt) => {
-        this.setState({...this.state, [evt.target.name]: evt.target.value, error: ''})
+        this.setState({[evt.target.name]: evt.target.value, error: ''})
     }
 
     handleSubmit = async (evt) => {
